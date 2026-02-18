@@ -1,0 +1,38 @@
+2026-02-15 00:41:39,136 [INFO] ======================================================================
+2026-02-15 00:41:39,136 [INFO] TESTING CONFIGURATION
+2026-02-15 00:41:39,136 [INFO] ======================================================================
+2026-02-15 00:41:39,168 [INFO] Testing data fetch (this may take 30 seconds)...
+2026-02-15 00:41:39,169 [INFO] ======================================================================
+2026-02-15 00:41:39,169 [INFO] STARTING AUTOMATED DATA UPDATE
+2026-02-15 00:41:39,169 [INFO] ======================================================================
+2026-02-15 00:41:39,170 [INFO] Database initialized
+2026-02-15 00:41:39,170 [INFO] Fetching latest data from NOAA ERDDAP...
+2026-02-15 00:41:39,725 [ERROR] Update failed: 'request_delay'
+Traceback (most recent call last):
+  File "E:\BlueNexus\03_realtime_monitor\auto_update_service.py", line 68, in perform_update
+    result = fetch_latest_data()
+  File "E:\BlueNexus\03_realtime_monitor\data_fetcher.py", line 634, in fetch_latest_data
+    time.sleep(erddap['request_delay'])
+KeyError: 'request_delay'
+2026-02-15 00:41:39,738 [ERROR] ======================================================================
+2026-02-15 00:41:39,739 [INFO] ======================================================================
+2026-02-15 00:41:39,740 [INFO] ======================================================================
+2026-02-15 00:43:19,606 [INFO] ======================================================================
+2026-02-15 00:43:19,607 [INFO] TESTING CONFIGURATION
+2026-02-15 00:43:19,607 [INFO] ======================================================================
+2026-02-15 00:43:19,616 [INFO] Testing data fetch (this may take 30 seconds)...
+2026-02-15 00:43:19,616 [INFO] ======================================================================
+2026-02-15 00:43:19,616 [INFO] STARTING AUTOMATED DATA UPDATE
+2026-02-15 00:43:19,616 [INFO] ======================================================================
+2026-02-15 00:43:19,617 [INFO] Database initialized
+2026-02-15 00:43:19,617 [INFO] Fetching latest data from NOAA ERDDAP...
+2026-02-15 00:43:20,172 [ERROR] Update failed: 'request_delay'
+Traceback (most recent call last):
+  File "E:\BlueNexus\03_realtime_monitor\auto_update_service.py", line 68, in perform_update
+    result = fetch_latest_data()
+  File "E:\BlueNexus\03_realtime_monitor\data_fetcher.py", line 634, in fetch_latest_data
+    time.sleep(erddap['request_delay'])
+KeyError: 'request_delay'
+2026-02-15 00:43:20,173 [ERROR] ======================================================================
+2026-02-15 00:43:20,174 [INFO] ======================================================================
+2026-02-15 00:43:20,174 [INFO] ======================================================================

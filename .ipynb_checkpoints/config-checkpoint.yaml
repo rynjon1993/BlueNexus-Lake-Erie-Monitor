@@ -1,0 +1,42 @@
+# Lake Erie Monitor Configuration
+# Currently configured for HISTORICAL DEMO MODE (Dec 2023 data)
+# For live monitoring, update data_fetcher.py date range + verify real-time SST source
+
+# Geographic Bounding Box (Lake Erie)
+bbox:
+  lat_min: 41.3
+  lat_max: 42.9
+  lon_min: -83.5
+  lon_max: -78.8
+
+# Data Update Schedule
+schedule:
+  hour: 8                           # 8:00 AM
+  minute: 0
+  timezone: "America/New_York"      # EST/EDT
+
+# Bloom Risk Thresholds
+thresholds:
+  sst_bloom: 20.0                   # °C - Temperature threshold for HAB risk
+  chl_low: 10.0                     # mg/m³ - Low chlorophyll alert
+  chl_moderate: 20.0                # mg/m³ - Moderate bloom
+  chl_high: 40.0                    # mg/m³ - Severe bloom
+  western_basin_lon: -82.5          # Longitude dividing west/east basins
+
+# Data Retention
+retention_days: 30                  # Keep 30 days of historical data in cache
+
+# ERDDAP Server Settings
+erddap:
+  base_url: "https://apps.glerl.noaa.gov/erddap"
+  sst_dataset: "GLSEA_GCS"
+  chl_dataset: "LE_CHL_VIIRS_SQ"
+  request_delay: 15                 # Seconds between requests (server throttling)
+  retry_attempts: 3
+  retry_delay: 30                   # Seconds between retries
+
+# Dashboard Settings
+dashboard:
+  title: "🌊 Lake Erie Live Monitor"
+  refresh_interval: 300             # Seconds (5 min) - how often to check for new data
+  show_debug_info: false            # Show technical details in sidebar

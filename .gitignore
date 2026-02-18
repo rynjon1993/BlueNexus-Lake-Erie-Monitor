@@ -1,0 +1,26 @@
+# Data files (regenerated at runtime)
+cache/
+*.db
+*.db-wal
+*.db-shm
+temp_*.nc
+archive_progress.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
